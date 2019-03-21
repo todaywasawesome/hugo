@@ -1,9 +1,10 @@
 version: '1.0'
 stages:
-  - build
+  - Builds
 steps:
   Builds:
     type: parallel
+    stage: Builds
     steps: 
       BuildingDockerImage:
         title: Building Docker Image with goproxy
