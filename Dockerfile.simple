@@ -1,0 +1,12 @@
+# GitHub:       https://github.com/gohugoio
+# Twitter:      https://twitter.com/gohugoio
+# Website:      https://gohugo.io/
+
+FROM scratch
+COPY hugobinary /hugo
+ARG  WORKDIR="/site"
+WORKDIR ${WORKDIR}
+VOLUME  ${WORKDIR}
+EXPOSE  1313
+ENTRYPOINT [ "/hugo" ]
+CMD [ "--help" ]
