@@ -5,7 +5,7 @@
 FROM golang:1.11-stretch AS build
 #Set GoProxy Path
 ENV GOPROXY=https://gocenter.io
-RUN go env goproxy
+RUN go env
 
 WORKDIR /go/src/github.com/gohugoio/hugo
 RUN apt-get install \
