@@ -15,6 +15,8 @@ RUN go get -d .
 ARG CGO=0
 ENV CGO_ENABLED=${CGO}
 ENV GOOS=linux
+#Set GoProxy Path
+ENV GOPROXY=https://gocenter.io
 
 # default non-existent build tag so -tags always has an arg
 ARG BUILD_TAGS="99notag"
