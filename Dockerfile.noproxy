@@ -12,7 +12,7 @@ RUN apt-get install \
     git gcc g++ binutils
 COPY . /go/src/github.com/gohugoio/hugo/
 ENV GO111MODULE=on
-RUN time go get -d .
+RUN go get -d .
 
 ARG CGO=0
 ENV CGO_ENABLED=${CGO}
